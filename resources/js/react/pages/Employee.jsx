@@ -10,7 +10,7 @@ const Employee = () => {
     const [employee, setEmployee] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/employees/${id}`)
+        axios.get(`/api/employees/${id}`)
             .then((response) => setEmployee(response.data))
             .catch((error) => console.error("Error fetching post:", error));
     }, [id]);

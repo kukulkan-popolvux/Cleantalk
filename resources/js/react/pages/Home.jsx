@@ -16,8 +16,8 @@ const Home = () => {
         apiEmployees(currentPage);
     }, [currentPage]);
 
-    const apiEmployees = async (page) => {
-        axios.get(`http://localhost:8000/api/employees?page=${page}`)
+    const apiEmployees = (page) => {
+        axios.get(`/api/employees?page=${page}`)
             .then(response => {
                 setEmployees(response.data.data);
                 setLastPage(response.data.last_page);
