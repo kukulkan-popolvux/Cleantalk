@@ -26,6 +26,6 @@ class Employee extends Model
 
     public function subordinates()
     {
-        return $this->hasMany(Employee::class, 'boss_id');
+        return $this->hasMany(Employee::class, 'boss_id')->with('subordinates');
     }
 }
